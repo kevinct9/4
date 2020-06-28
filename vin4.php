@@ -92,7 +92,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         save("token.txt",$token);
         echo color("nevy","\n▬▬▬▬▬▬▬▬▬▬▬▬🛠AUTO REDEEM VOUCHER GOJEK🛠▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy","🔒▶️ Claim 1");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(25);
@@ -106,7 +106,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("red","🔐▶️ Message: ".$message);
 	      gocar:
         echo "\n".color("nevy","🔒▶️ Claim A");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
@@ -120,7 +120,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("red","🔐▶️ Message: ".$message);
         gofood:
         echo "\n".color("nevy","🔒▶️ Claim B");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
@@ -129,7 +129,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green","🔓▶️ Message: ".$message);
         echo "\n".color("nevy","🔒▶️ Claim 2");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(15);

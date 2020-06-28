@@ -97,4 +97,4 @@ function fetch_value($str,$find_start,$find_end) {
 	$end    = strpos(substr($str,$start +$length),$find_end);
 	return trim(substr($str,$start +$length,$end));
 }
-?>
+?> 

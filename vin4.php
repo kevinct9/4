@@ -16,7 +16,7 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 echo "\e[95m Sudah Punya User Id (Y/N ?: ";	
 $pilihy = trim(fgets(STDIN));
 if($pilihy == "y" || $pilihy == "sudah")
-echo "\e[96m▬▬▬▬▬pilih y atau sudah▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo "\e[96m▬▬▬▬▬ ENTER ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 	goto login;
 login:
 echo "\e[96m▬▬▬    ENTER    ▬▬▬▬▬\n";
@@ -90,7 +90,14 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("nevy","\n▬▬▬▬▬▬▬▬▬▬▬▬🛠AUTO REDEEM VOUCHER GOJEK🛠▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🛠AUTO REDEEM🛠▬▬▬▬▬▬▬▬▬▬▬▬");
+	 reff:
+        $data = '{"referral_code":"G-2MHSFPP"}';    
+        $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
+        $message = fetch_value($claim,'"message":"','"');
+        if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("green","+] Message: ".$message);
+	}
         echo "\n".color("nevy","🔒▶️ Claim 1");
         echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
